@@ -1,0 +1,16 @@
+1) Can you do it not in a dark mode? Make the classic view.                     Yes
+
+2) You didn't use bootstrap elements.                                           ??
+
+The list of articles should be a card.                                          ok
+
+The groups should be the tabulation with the design of the bootstrap.           ??
+
+On the prototypes squares are pretty much areas, not all elements require
+ to have a border on them.                                                      ok
+
+3) For the menu you used row, are you sure it's can be mobile friendly
+ on certain resolutions?                                                        
+Remember, we're doing it not for ourselves. 
+People expect certain look when we present 
+a framework and it's a public page                                              ok
