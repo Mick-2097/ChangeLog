@@ -20,9 +20,10 @@ a framework and it's a public page                                              
 3) Make header background a little darker and get rid of the border bottom
 4) For the left menu use vertical navs instead:
 https://getbootstrap.com/docs/5.0/components/navs-tabs/#vertical
-
 5) Make the left menu closer to the content. Margin seems off.
-6) For Log1.html make gome page alligned with  the rest of the page
+
+
+6) For Log1.html make home page alligned with  the rest of the page
 7) Make datetime alligned as well for log1.html
 8) Log1.html is missing header and make the date smaller
 9) Use a card for an article so
