@@ -9,46 +9,62 @@
 </head>
 <body class="p-0 margin-0">
 <!-- Navbar -->
-    <div class="navbar border-bottom border-dark border-3 m-auto px-5 py-2">
+    <div class="navbar px-3" style="background-color: rgb(230, 230, 255);">
 
-        <div class="d-sm-inline-flex w-100 mt-5 mb-5 align-items-end justify-content-around">
+        <div class="d-sm-inline-flex text-center w-100 my-2 align-items-center">
             <div class="col">
-            </div>
-            <div class="col">
-                <h1 class="text-warning text-center">Change<span class="text-success">Log</span></h1>
+                <h1 class="text-warning">Change<span class="text-success">Log</span></h1>
             </div>
             <div class="col">
                 <h2 class="text-dark text-center">Homepage</h2>
+            </div>
+            <div class="col">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                      </svg>
+                    </button>
+                </form>
             </div>
         </div>
 
     </div>
 <!-- Main -->
-    <div class="d-md-inline-flex my-5 w-100 px-3 m-auto">
+    <div class="d-sm-flex my-5 w-sm-100 w-75 m-auto">
         <!-- buttons -->
-        <div class="btn-group-vertical d-flex h-25 mb-5">
-            <a class="btn btn-outline-primary btn-lg">Group 1</a>
-            <a class="btn btn-outline-primary btn-lg">Group 2</a>
-            <a class="btn btn-outline-primary btn-lg">Group 3</a>
-            <a class="btn btn-outline-primary btn-lg">Group 4</a>
-        </div>
+        <ul class="nav flex-column text-center mx-sm-auto fs-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Group 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Group 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Group 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Group 4</a>
+            </li>
+        </ul>
         <!-- cards -->
-        <div class="container">
-            <div class="card list-group-item border border-dark mb-3">
+        <div class="flex-column w-75">
+            <div class="card list-group-item mb-3">
                 <div class="card-body">
                     <a class="card-title fs-2" href="/ChangeLog/Log1.html">Log 1 (Link to this log)</a>
                     <p class="card-date fs-5 mt-3">Date/time of this log</p>
                     <p class="card-text">Brief description of this log....</p>
                 </div>
             </div>
-            <div class="card list-group-item border border-dark mb-3">
+            <div class="card list-group-item border mb-3">
                 <div class="card-body">
                     <a class="card-title fs-2" href="#">Log 2</a>
                     <p class="card-date fs-5 mt-3">Date/time of this log</p>
                     <p class="card-text">Brief description of this log....</p>
                 </div>
             </div>
-            <div class="card list-group-item border border-dark mb-3">
+            <div class="card list-group-item border mb-3">
                 <div class="card-body">
                     <a class="card-title fs-2" href="#">Log 3</a>
                     <p class="card-date fs-5 mt-3">Date/time of this log</p>

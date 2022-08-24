@@ -14,3 +14,26 @@ On the prototypes squares are pretty much areas, not all elements require
 Remember, we're doing it not for ourselves. 
 People expect certain look when we present 
 a framework and it's a public page                                              ok
+
+1) Remove border-dark from cards.
+2) Make the header more narrow
+3) Make header background a little darker and get rid of the border bottom
+4) For the left menu use vertical navs instead:
+https://getbootstrap.com/docs/5.0/components/navs-tabs/#vertical
+
+5) Make the left menu closer to the content. Margin seems off.
+6) For Log1.html make gome page alligned with  the rest of the page
+7) Make datetime alligned as well for log1.html
+8) Log1.html is missing header and make the date smaller
+9) Use a card for an article so
+10) YOu don't use any layout wich makes the pages look unfinished. Use this ones:
+https://getbootstrap.com/docs/5.0/layout/containers/#default-container
+11) Check out the examples and how they built a page:
+https://getbootstrap.com/docs/5.0/examples/
+
+12) For the header le'ts use a navbar:
+https://getbootstrap.com/docs/5.2/components/navbar/
+
+13) Take a look at the examples and get the structuring ideas from it:
+https://getbootstrap.com/docs/5.2/examples/blog/
+https://getbootstrap.com/docs/5.2/examples/product/
