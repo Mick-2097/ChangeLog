@@ -11,36 +11,38 @@
 <body>
 
 <!-- Navbar -->
-  <div class="navbar px-3" style="background-color: rgb(230, 230, 255);">
+  <div class="navbar px-3" style="background-color: rgb(245, 245, 255);">
 
     <div class="d-sm-inline-flex text-center w-100 my-2 align-items-center">
-        <div class="col">
+        <div class="container">
             <h1 class="text-warning">Change<span class="text-success">Log</span></h1>
         </div>
-        <div class="col">
-            <h2 class="text-dark text-center">Homepage</h2>
-        </div>
-        <div class="col">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16" data-darkreader-inline-fill="" style="--darkreader-inline-fill:currentColor;">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
-                  </svg>
-                </button>
-            </form>
+        <div class="container">
+            <h2 class="text-dark text-center">Log1</h2>
         </div>
     </div>
 
   </div>
-    
+
+<!-- Home button -->
     <a class="btn btn-lg btn-outline-primary m-3" href="/ChangeLog/index.html">Homepage</a>
-    
-    <section class="w-75 m-auto">
-        <p class="fs-3 p-5">Date/time</p>
-        <p class="fs-5 p-5">Detailed description of logged change here.....</p>
-    </section>
+
+<!-- Log card -->
+    <div class="card list-group-item border-light shadow w-75 m-auto">
+        <div class="card-body">
+            <p class="card-subtitle fs-3">Date/time of this log</p>
+            <p class="card-text">
+                Full description of this log.....
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint optio non, voluptatum eligendi aliquid explicabo expedita voluptates illo voluptatibus vitae. Eius aut maxime accusamus modi. Reprehenderit vel consectetur culpa ea animi adipisci odit repellendus rerum ab hic, voluptatibus rem tempora voluptatum ipsum in voluptate laborum blanditiis officiis! Consequatur autem suscipit error perferendis enim harum tempora a ea vel ipsam ducimus rerum placeat quam necessitatibus quas dignissimos, exercitationem veritatis reprehenderit dolor odit odio fuga deleniti, nisi accusamus. Sequi odio illum unde in fuga aliquid soluta vel eum minus, exercitationem dolore dignissimos enim, magni adipisci id vitae libero. Saepe veniam ducimus a.
+            </p>
+        </div>
+    </div>
 
 </body>
-
+<style>
+    ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
 </html>
