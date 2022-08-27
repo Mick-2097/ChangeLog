@@ -38,3 +38,23 @@ https://getbootstrap.com/docs/5.2/components/navbar/
 13) Take a look at the examples and get the structuring ideas from it:
 https://getbootstrap.com/docs/5.2/examples/blog/
 https://getbootstrap.com/docs/5.2/examples/product/
+
+
+https://mick-2097.github.io/ChangeLog/Log1.html
+Is missing the headline and also date and time should not be this big.
+THe header in the right upper corner, but it should be the place for the horizontal navigation and the header should be in the center of the page. h1
+
+The general points:
+
+x1) Remember, bootstrap has a solution for everything. In this part of work you definitely missed forms and they are styled weird. Too black lines, strange paddings etc. Take a look at bootstrap forms
+
+x2) Some of your pages content is wrong. E.g. on log1.html you have container which is supposed to contain the entire page content, but instead it has just a menu (link?) and the content is a separate card somewhere else and in order to align you had to repeat twice: w-75 m-auto
+
+3) Work on footer as well
+
+4) Attach summernote plugin to the editor input.
+Also don't be crazy about sizes. Standard size elements are fine and make pages look more official. Especially for admin panel.
+
+There's a lot to list about forms, but I think you should reapply the strategy for all of them.
+
+In the admin panel and public pages add nav menu to groups, changelogs and home for public I think
