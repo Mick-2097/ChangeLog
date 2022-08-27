@@ -50,11 +50,11 @@ x1) Remember, bootstrap has a solution for everything. In this part of work you 
 
 x2) Some of your pages content is wrong. E.g. on log1.html you have container which is supposed to contain the entire page content, but instead it has just a menu (link?) and the content is a separate card somewhere else and in order to align you had to repeat twice: w-75 m-auto
 
-3) Work on footer as well
+x3) Work on footer as well
 
-4) Attach summernote plugin to the editor input.
+?4) Attach summernote plugin to the editor input.
 Also don't be crazy about sizes. Standard size elements are fine and make pages look more official. Especially for admin panel.
 
 There's a lot to list about forms, but I think you should reapply the strategy for all of them.
 
-In the admin panel and public pages add nav menu to groups, changelogs and home for public I think
+x In the admin panel and public pages add nav menu to groups, changelogs and home for public I think
