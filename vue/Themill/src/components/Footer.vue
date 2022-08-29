@@ -1,6 +1,6 @@
 <template>
 <footer class="d-flex flex-wrap justify-content-start align-items-center p-3 mt-auto" style="background-color: rgba(0, 0, 0, 0.1);">
-    <div class="col-md-4 d-flex align-items-center">
+    <div class="d-flex">
         <a href="https://vuejs.org/" class="mb-3 ms-5 me-3 mb-md-0 text-decoration-none lh-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69" width="16" height="16"  xmlns:v="https://vecta.io/nano"><path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/><path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
         </a>
