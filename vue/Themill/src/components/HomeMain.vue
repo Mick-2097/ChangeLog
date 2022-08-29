@@ -2,7 +2,7 @@
 <div class="d-sm-flex mt-3 mb-auto w-75 mx-auto" style="min-width: 320px;">
     
     <!-- buttons -->
-    <ul class="nav flex-column text-center mx-sm-auto">
+    <ul class="nav flex-column text-center mx-auto">
         <li class="nav-item">
             <a class="nav-link" href="#">Group 1</a>
         </li>

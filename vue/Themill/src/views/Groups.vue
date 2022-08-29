@@ -1,6 +1,6 @@
 <script setup>
     
-import Header from '../components/Header.vue';
+import AdminHeader from '../components/AdminHeader.vue';
 import GroupsMain from '../components/GroupsMain.vue';
 import Footer from '../components/Footer.vue';
 
@@ -8,7 +8,7 @@ import Footer from '../components/Footer.vue';
 
 <template>
 
-    <Header/>
+    <AdminHeader/>
     <GroupsMain/>
     <Footer/>
 

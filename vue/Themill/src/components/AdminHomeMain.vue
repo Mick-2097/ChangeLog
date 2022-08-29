@@ -26,11 +26,11 @@
                     <td>Today</td>
                     <td>Log 1</td>
                     <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        <div class="btn-group dropend">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="Groups Dropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                             Groups
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="defaultDropdown">
+                            <ul class="dropdown-menu shadow-lg">
                                 <li><p class="dropdown-item">Group 1</p></li>
                                 <li><p class="dropdown-item">Group 2</p></li>
                                 <li><p class="dropdown-item">Group 3</p></li>
@@ -44,8 +44,8 @@
                     <td>Today</td>
                     <td>Log 2</td>
                     <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        <div class="btn-group dropend">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="Groups Dropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                             Groups
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="defaultDropdown">
@@ -62,8 +62,8 @@
                     <td>Today</td>
                     <td>Log 3</td>
                     <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        <div class="btn-group dropend">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="Groups Dropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                             Groups
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="defaultDropdown">
@@ -80,8 +80,8 @@
                     <td>Today</td>
                     <td>Log 4</td>
                     <td>
-                        <div class="btn-group">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        <div class="btn-group dropend">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="Groups Dropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                             Groups
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="defaultDropdown">
