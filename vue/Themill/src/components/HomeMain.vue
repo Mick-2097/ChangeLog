@@ -1,19 +1,52 @@
+<script setup>
+
+    let group1Data = []
+    fetch('group1.json')
+        .then(res => res.json())
+        .then(data => {
+            group1Data.value = data
+            console.log(group1Data.value)
+        }) 
+    let group2Data = []
+    fetch('group2.json')
+        .then(res => res.json())
+        .then(data => {
+            group2Data.value = data
+            console.log(group2Data.value)
+        }) 
+    let group3Data = []
+    fetch('group3.json')
+        .then(res => res.json())
+        .then(data => {
+            group3Data.value = data
+            console.log(group3Data.value)
+        }) 
+    let group4Data = []
+    fetch('group4.json')
+        .then(res => res.json())
+        .then(data => {
+            group4Data.value = data
+            console.log(group4Data.value)
+        })
+    
+</script>
+
 <template>
 <div class="d-sm-flex mt-3 mb-auto w-75 mx-auto" style="min-width: 320px;">
     
     <!-- buttons -->
-    <ul class="nav flex-column text-center mx-auto">
+    <ul class="nav flex-column text-center mx-auto group-buttons">
         <li class="nav-item">
-            <a class="nav-link" href="#">Group 1</a>
+            <a @click="" class="nav-link" href="#">Group 1</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Group 2</a>
+            <a @click="" class="nav-link" href="#">Group 2</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Group 3</a>
+            <a @click="" class="nav-link" href="#">Group 3</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Group 4</a>
+            <a @click="" class="nav-link" href="#">Group 4</a>
         </li>
     </ul>
 
