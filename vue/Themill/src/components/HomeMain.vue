@@ -1,7 +1,6 @@
 <script setup>
-    
     import { ref, onBeforeMount, reactive } from "vue"
-
+    
     const state = reactive({ 
         selected: [],
         groups: []
@@ -18,7 +17,6 @@
                 state.selected = data
             })
     }
-    
 </script>
 
 <template>
@@ -29,7 +27,6 @@
         <li v-for="group in state.groups" :key="group.id" class="nav-item">
             <a @click="clicked" class="nav-link" href="#">{{ group.name }}</a>
         </li>
-        
     </ul>
 
     <!-- cards -->
