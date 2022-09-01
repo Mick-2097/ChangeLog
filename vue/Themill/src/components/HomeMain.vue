@@ -1,33 +1,53 @@
 <script setup>
+    import { ref } from "vue"
+    
+    let selected = []
+    const componentKey = ref(0)
+    const updateComponent = () => componentKey.value +=1
 
     let group1Data = []
     fetch('group1.json')
         .then(res => res.json())
         .then(data => {
             group1Data.value = data
-            console.log(group1Data.value)
+            selected.value = group1Data.value
+            console.log('selected.value = ', selected.value)
         }) 
     let group2Data = []
     fetch('group2.json')
         .then(res => res.json())
         .then(data => {
             group2Data.value = data
-            console.log(group2Data.value)
         }) 
     let group3Data = []
     fetch('group3.json')
         .then(res => res.json())
         .then(data => {
             group3Data.value = data
-            console.log(group3Data.value)
         }) 
     let group4Data = []
     fetch('group4.json')
         .then(res => res.json())
         .then(data => {
             group4Data.value = data
-            console.log(group4Data.value)
         })
+    
+    let g1Select = () => {
+        selected.value = group1Data.value
+        updateComponent()
+    }
+    let g2Select = () => {
+        selected.value = group2Data.value
+        updateComponent()
+    }
+    let g3Select = () => {
+        selected.value = group3Data.value
+        updateComponent()
+    }
+    let g4Select = () => {
+        selected.value = group4Data.value
+        updateComponent()
+    }
     
 </script>
 
@@ -37,42 +57,30 @@
     <!-- buttons -->
     <ul class="nav flex-column text-center mx-auto group-buttons">
         <li class="nav-item">
-            <a @click="" class="nav-link" href="#">Group 1</a>
+            <a @click="g1Select()" class="nav-link" href="#">Group 1</a>
         </li>
         <li class="nav-item">
-            <a @click="" class="nav-link" href="#">Group 2</a>
+            <a @click="g2Select()" class="nav-link" href="#">Group 2</a>
         </li>
         <li class="nav-item">
-            <a @click="" class="nav-link" href="#">Group 3</a>
+            <a @click="g3Select()" class="nav-link" href="#">Group 3</a>
         </li>
         <li class="nav-item">
-            <a @click="" class="nav-link" href="#">Group 4</a>
+            <a @click="g4Select()" class="nav-link" href="#">Group 4</a>
         </li>
     </ul>
 
     <!-- cards -->
     <div class="flex-column w-sm-100 w-75 m-auto">
-        <div class="card list-group-item border-light shadow mb-3">
-            <div class="card-body">
-                <a class="card-title"><RouterLink to="/LogView">Log 1 (link to this log)</RouterLink></a>
-                <p class="card-subtitle my-3">Date/time of this log</p>
-                <p class="card-text">Brief description of this log....</p>
+        
+            <div v-for="object in selected.value" :key="object.id" class="card list-group-item border-light shadow mb-3">
+                <div class="card-body" :key="componentKey">
+                    <a class="card-title"><RouterLink to="/LogView">{{ object.title }}</RouterLink></a>
+                    <p class="card-subtitle my-3">{{ object.date }}</p>
+                    <p class="card-text">{{ object.description.substring(0, 60) }} ......</p>
+                </div>
             </div>
-        </div>
-        <div class="card list-group-item border-light shadow mb-3">
-            <div class="card-body">
-                <a class="card-title" href="#">Log 2</a>
-                <p class="card-subtitle my-3">Date/time of this log</p>
-                <p class="card-text">Brief description of this log....</p>
-            </div>
-        </div>
-        <div class="card list-group-item border-light shadow mb-3">
-            <div class="card-body">
-                <a class="card-title" href="#">Log 3</a>
-                <p class="card-subtitle my-3">Date/time of this log</p>
-                <p class="card-text">Brief description of this log....</p>
-            </div>
-        </div>
+
     </div>
 </div>
 </template>
