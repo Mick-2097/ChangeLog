@@ -14,7 +14,7 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/logview',
+      path: '/logview/:group/:log',
       name: 'logview',
       component: LogView
     },

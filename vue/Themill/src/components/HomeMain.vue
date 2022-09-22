@@ -1,32 +1,31 @@
 <script setup>
-    import { reactive } from "vue"
-    
-    const state = reactive({ 
-        selected: [],   // Group selected
-        groups: [],     // List of groups
-    })
+import { reactive } from "vue"
 
-    fetch('groups.json')
+const state = reactive({ 
+    logs: [],   // Group selected
+    groups: [],     // List of groups
+    currentGroupID: null,
+})
+
+//      On load put group data into reactive state management and show 1st object
+fetch('groups.json')
+.then(res => res.json())
+.then(data => { 
+    state.groups = data
+    if (state.groups.length) {
+        let currentGroup = state.groups[0].id
+        groupSelect(currentGroup)
+    }
+})
+//      On click put selected group into reactive state management
+const groupSelect = (groupID) => {
+    state.currentGroupID = groupID
+    fetch(`group${groupID}.json`)
     .then(res => res.json())
-    .then(data => { 
-        state.groups = data
-        if (state.groups.length) {
-            let currentID = state.groups[0].id
-            groupSelect(currentID)
-        }
+    .then(data => {
+        state.logs = data
     })
-
-    const groupSelect = (groupID) => {
-        fetch('group' + groupID + '.json')
-            .then(res => res.json())
-            .then(data => {
-                state.selected = data
-        })
-    }
-
-    const logSelect = (object) => {
-        console.log(object.id)
-    }
+}
 
 </script>
 
@@ -43,13 +42,15 @@
     <!-- cards -->
     <div class="flex-column w-sm-100 w-75 m-auto">
         
-        <div v-for="object in state.selected" :key="object.id" class="card list-group-item border-light shadow mb-3">
+        <div v-for="log in state.logs" :key="log.id" class="card list-group-item border-light shadow mb-3">
             <div class="card-body">
-                <a @click="logSelect(object)" class="card-title">
-                <RouterLink to="/LogView/object.id">{{ object.title }}</RouterLink>
-                </a>
-                <p class="card-subtitle my-3">{{ object.date }}</p>
-                <p class="card-text">{{ object.description.substring(0, 60) }} .....</p>
+                    <RouterLink class="card-title" 
+                    :to="{
+                        name: 'logview', 
+                        params: {group: state.currentGroupID, log: log.id}}">
+                        {{ log.title }}</RouterLink>
+                <p class="card-subtitle my-3">{{ log.date }}</p>
+                <p class="card-text">{{ log.description.substring(0, 60) }} .....</p>
             </div>
         </div>
 
