@@ -4,6 +4,7 @@ import LogView from '../views/LogView.vue'
 import Groups from '../views/Groups.vue'
 import Editor from '../views/Editor.vue'
 import AdminHome from '../views/AdminHome.vue'
+import Login from '../views/Login.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,29 +12,57 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Home',
+      }
     },
     {
       path: '/logview/:group/:log',
       name: 'logview',
-      component: LogView
+      component: LogView,
+      meta: {
+        title: 'Log view',
+      }
     },
     {
       path: '/groups',
       name: 'groups',
-      component: Groups
+      component: Groups,
+      meta: {
+        title: 'Groups',
+      }
     },
     {
       path: '/editor',
       name: 'editor',
-      component: Editor
+      component: Editor,
+      meta: {
+        title: 'Editor',
+      }
     },
     {
       path: '/adminhome',
       name: 'adminhome',
-      component: AdminHome
+      component: AdminHome,
+      meta: {
+        title: 'Admin home',
+      }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: {
+        title: 'Log in',
+      }
     },
   ]
+})
+
+router.beforeEach((to, from, next) => {
+document.title = `The mill | ${to.meta.title}`
+next()
 })
 
 export default router
