@@ -1,13 +1,31 @@
 <script setup>
 import { reactive } from "vue"
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyBNDyEzjMCvXWV1t5THwqUrnWddRKhD0JQ",
+    authDomain: "the-mill-375f8.firebaseapp.com",
+    databaseURL: "https://the-mill-375f8-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "the-mill-375f8",
+    storageBucket: "the-mill-375f8.appspot.com",
+    messagingSenderId: "443263288817",
+    appId: "1:443263288817:web:582671d60064746f7f3050",
+    measurementId: "G-978JJ4SCJ7"
+  };
+
+const app = initializeApp(firebaseConfig)
+const database = getAnalytics(app)
+console.log(`${database.app._options.databaseURL}/groups`)
 
 const state = reactive({ 
     logs: [],
     groups: [],
     currentGroupID: null,
 })
-//      On load put group data into reactive state management and show 1st object
-fetch('groups.json')
+
+
+fetch(`${database.app._options.databaseURL}/groups`)
 .then(res => res.json())
 .then(data => { 
     state.groups = data
@@ -16,7 +34,7 @@ fetch('groups.json')
         groupSelect(currentGroup)
     }
 })
-//      On click put selected group into reactive state management
+
 const groupSelect = (groupID) => {
     state.currentGroupID = groupID
     fetch(`group${groupID}.json`)
