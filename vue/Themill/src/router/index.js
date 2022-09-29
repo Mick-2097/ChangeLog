@@ -15,6 +15,7 @@ const router = createRouter({
       component: Home,
       meta: {
         title: 'Home',
+        authRequired: true,
       }
     },
     {

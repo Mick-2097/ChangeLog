@@ -1,3 +1,8 @@
+<script setup>
+import { userAuth } from '../stores/userAuth.js'
+const isLoggedIn = userAuth()
+</script>
+
 <template>
     <div class="main w-25 m-auto" style="min-width: 320px;">
 
@@ -17,7 +22,8 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Log in</button>
+        <!-- use pinia :-) -->
+        <button @click.prevent="isLoggedIn.toggle()" class="w-100 btn btn-lg btn-primary mb-3" type="submit">Log in</button>
         <button class="mb-3 btn btn-link">Create a new account</button>
       </form>
       
